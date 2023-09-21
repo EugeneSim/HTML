@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- IIFE -- immediately invoked function expression -->
+    <input id='n1' type="number">
+    <input id='n2' type="number">
+    <br><br>
+    <button id="add">Add</button>
+    <button id="sub">Subtract</button>
+    <br><br>
+    <span id="res"></span>
+
+    <script src="../scripts/calc.js"></script>
+    <script>
+        let a = document.getElementById('add');
+        let b = document.getElementById('sub');
+        var opr;
+
+        a.addEventListener('click', function () {
+            let n1 = Number(document.getElementById('n1').value);
+            let n2 = Number(document.getElementById('n2').value);
+            document.getElementById('res').innerText = calc(n1, n2, '+');
+            //console.log(a.textContent + " clicked");
+        });
+        b.addEventListener('click', function () {
+            let n1 = Number(document.getElementById('n1').value);
+            let n2 = Number(document.getElementById('n2').value);
+            document.getElementById('res').innerText = calc(n1, n2, '-');
+            // console.log(b.textContent + " clicked");
+        });
+
+
+        (function (x, y) {
+            console.log(x + y);
+        })(10, 30);
+
+        (function () {
+            console.log('Hello World');
+        })();
+
+    </script>
+</body>
+
+</html>

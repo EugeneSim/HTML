@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .st1 {
+            /* px is the smallest unit of css */
+            font-size: 32px;
+        }
+
+        .st2 {
+            font-size: 64px;
+        }
+
+        .stem {
+            /* 1.5 times more than the parent */
+            font-size: 2em;
+        }
+
+        .strem {
+            /* rem is root em and relative to root */
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <span>Lorem, ipsum.</span>
+    <br>
+    <span class="st1">Lorem, ipsum.</span>
+    <br>
+    <span class="st2">Lorem, ipsum dolor.</span>
+    <hr>
+    <!-- relative sizes -->
+    <div class="st1">
+        <div class="stem">
+            <span>1 em</span>
+        </div>
+        <div class="strem">
+            <span>1rem</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

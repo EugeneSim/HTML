@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Comninator Selectors */
+        /* decendent Combinator */
+        /* applied to all the child and grand child elements */
+        .div p {
+            color: red;
+        }
+
+        /* child Combinator */
+        /* applied only to the direct child elements */
+        .ch>p {
+            font-weight: bold;
+        }
+
+        /* Adjecent Sibling Combinator */
+        /* Applicable to the immediate sibling only */
+        .adj+p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="ch adj ">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

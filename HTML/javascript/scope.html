@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let test = 'testx'; // global scope as it is declared globally outside any block
+        const testc = 'testc'; // global scope as it is declared globally outside any block
+        {
+            console.log('var y is :' + y);
+            let x = 10; // block scope
+            x = 200;
+            console.log('let x is: ' + x);
+            var y = 20; // global scope
+            var y = 30; // same as y=30
+            console.log('var y is :' + y);
+            console.log(test);
+            console.log(testc);
+
+            // const key word
+            const c = 'uob'; // block scope  string type
+            document.write(c);
+            // c = 'Maybank'; // cannot reassign to a const
+        }
+        console.log(testc);
+        document.write(test);
+        // document.write(c); // reference error
+        y = 300;
+        //var y = 300;
+        console.log('var y is :' + y);
+        let x = 'some value'; // string type
+        console.log('let x is: ' + x);
+    </script>
+</body>
+
+</html>

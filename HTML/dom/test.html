@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="test"></p>
+    <p id="c">1</p>
+
+    <button onclick="assign()">click</button>
+
+    <script>
+        function assign() {
+            let x = document.getElementById('test').innerHTML;
+            document.getElementById('test').innerHTML += " again";
+
+            let counter = 1;
+            let temp = document.getElementById('c').innerHTML;
+            document.getElementById('c').innerHTML = +temp + 1;
+            console.log(typeof (temp));
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,
+        th,
+        td {
+            border: .5px solid black;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        td {
+            background-color: rgb(196, 166, 224);
+            padding: 25px;
+        }
+
+        th {
+            background-color: rgb(163, 205, 238);
+
+        }
+
+        table {
+            border: .5px solid black;
+            width: 80%;
+            border-collapse: collapse;
+            /* The border-spacing is applicable only when the border-collapse is set to seperate */
+            border-spacing: 6px;
+            text-align: center;
+            caption-side: bottom;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            color: blue;
+            font-weight: bold;
+            font-size: larger;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Demo of Column span -->
+    <table>
+        <caption>Emp Info</caption>
+        <tr>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>city</th>
+        </tr>
+        <tr>
+            <td>Bill</td>
+            <td>Gates</td>
+            <td rowspan="2">US</td>
+        </tr>
+        <tr>
+            <td>someone</td>
+            <td>somename</td>
+            <!-- <td>US</td> -->
+        </tr>
+
+    </table>
+</body>
+
+</html>

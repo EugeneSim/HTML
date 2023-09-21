@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p">This is a <span>sample text</span></p>
+
+
+    <script>
+
+        console.log(document.getElementById('p').innerHTML);
+        console.log(document.getElementById('p').textContent);
+        var temp = document.getElementById('p').innerHTML;
+        document.getElementById('p').innerHTML += '<b> appended </b>'
+        var tmp = '<b> test </b>';
+        temp += tmp
+
+
+    </script>
+</body>
+
+</html>

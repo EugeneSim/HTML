@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Declaring a counter named x */
+        /* should be done on body element */
+        body {
+            counter-reset: x;
+        }
+
+
+        h3::before {
+            /* incrementing the counter x */
+            counter-increment: x;
+            /*displaying the counter's value*/
+            content: "Section " counter(x) ".";
+        }
+
+        /* Pseudo element */
+        p::before {
+            content: "this is a: "
+        }
+
+        p::after {
+            content: " concept"
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Similique, aliquam tempore.</p>
+    <p>Odio, adipisci quisquam!</p>
+    <p>Voluptatibus, deserunt nesciunt!</p>
+    <p>Iste, accusamus nemo.</p>
+    <p>Asperiores, voluptate quia.</p>
+    <p>Aut, corrupti hic.</p>
+    <p>Earum, exercitationem! Doloremque.</p>
+    <p>Voluptatem, esse ipsa!</p>
+    <p>Voluptatum, dolor aliquam.</p>
+
+    <h3>Html</h3>
+    <h3>CSS</h3>
+    <h3>Java</h3>
+    <h3>React</h3>
+    <h3></h3>
+
+
+</body>
+
+</html>

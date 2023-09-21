@@ -1,0 +1,31 @@
+  /* element selctor */
+  p {
+    color: #04f534;
+}
+
+/* name the selector with a . */
+/* to make it a class selector */
+.black-p-text {
+    color: black;
+    font-weight: bold;
+}
+
+/* id selector */
+/* starts with an # */
+#anything {
+    color: #f6a709;
+}
+
+#something {
+    font-style: italic;
+}
+
+/* element selctor */
+span {
+    color: blue;
+}
+
+/* element selctor */
+h1 {
+    color: blueviolet
+}

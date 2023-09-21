@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <input id='n1' type="number">
+    <input id='n2' type="number">
+    <button id="b" onclick=caldom()> add </button>
+    <span id="res"></span>
+
+    <script>
+        // functions
+        //syntax
+        /*
+        function <name>([parameter/s]){ ... code}
+        */
+        function sayHello() {
+            //document.write("Hello Javascript");
+            document.getElementById('p1').innerHTML = "Hello World";
+            console.log("Hello Javascript");
+        }
+        //sayhello with a name
+        function hello(name) {
+            document.getElementById('p2').innerHTML = "Hello! " + name;
+        }
+        // multiple parameters
+        function info(name, age) {
+            document.getElementById('p2').innerHTML = "Hello! " + name + ", you are " + age + ' years old';
+        }
+        //default parameter values
+        // the mandatory parameters should be listed before the ones with default values 
+        function info(age, name = 'john',) {
+            document.getElementById('p2').innerHTML = "Hello! " + name + ", you are " + age + ' years old';
+        }
+        //aritmetic operation with a function
+        // using the return statement
+        function calc(n1, n2, opr) {
+            if (opr == '+') {
+                return n1 + n2;
+            }
+            if (opr == '-') {
+                return n1 - n2;
+            }
+        }
+        function caldom() {
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            document.getElementById('res').textContent = +n1 + +n2;
+
+        }
+
+        //overload
+        // function add(n, m) {
+        //     return n + m;
+        // }
+        // function add(n, m, o) {
+        //     return n + m + o;
+        // }
+        function add(...x) { // spread operator(...)
+            let temp = 0
+            for (let i = 0; i < x.length; i++) {
+                temp += x[i];
+            }
+            return temp;
+        }
+
+        // Calling the functions
+        console.log(add(10, 20, 30, 50, 10, 70));
+        console.log(add(10, 20, 30, 50, 10));
+        console.log(add(10, 20, 30, 40));
+        console.log(add(1, 2));
+        hello('Alex');
+        sayHello();
+        info(31);
+        let ret = calc(10, 20, '-');
+        console.log('the result of operation is: ' + ret);
+    </script>
+</body>
+
+</html>

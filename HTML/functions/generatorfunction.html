@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p"></p>
+    <button id="b">Click to Genarate</button>
+
+    <script>
+        function* token() {
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+        }
+
+        function* counter() {
+            let temp = 0;
+            while (true) {
+                yield temp++;
+            }
+        }
+
+        let gen = counter();
+        document.getElementById('b').addEventListener('click', function () {
+            document.getElementById('p').innerText = gen.next().value;
+        });
+
+        // let tk = token();
+        // console.log(tk.next().value);
+        // console.log(tk.next().value);
+        // console.log(tk.next().value);
+        // console.log(tk.next().value);
+        // console.log(tk.next().value);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+        }
+
+        .two {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a" class="one"></div>
+    <div id="b" class="two"></div>
+
+    <button id="btn" onclick="change()">Click</button>
+    <script>
+        function change() {
+            let x = document.getElementById('a').className;
+            let y = document.getElementById('b').className;
+
+            if (x == 'one') {
+                document.getElementById('a').className = 'two';
+                document.getElementById('b').className = 'one';
+            } else {
+                document.getElementById('a').className = 'one';
+                document.getElementById('b').className = 'two';
+            }
+
+            // console.log(x);
+            // console.log(y);
+
+        }
+    </script>
+</body>
+
+</html>
